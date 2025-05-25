@@ -1,0 +1,101 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-18ce4c2980c-710f21bb96f6656e": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "db_promocion_dev",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "db_promocion_dev",
+				"url": "jdbc:postgresql://localhost:5432/db_promocion_dev",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-15",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-19048586f1d-38f580716ccdb7d3": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "db_online_shop_dev",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "db_online_shop_dev",
+				"url": "jdbc:postgresql://localhost:5432/db_online_shop_dev",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-15",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-1933214e5d0-665e5a2dd2d1a461": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"configuration": {
+				"host": "postgree12.postgres.database.azure.com",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://postgree12.postgres.database.azure.com:5432/postgres",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-15",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-193634bea3f-415799b590c959e5": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "db_ecommerce_dev",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "db_ecommerce_dev",
+				"url": "jdbc:postgresql://localhost:5432/db_ecommerce_dev",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-15",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {"postgres-jdbc-19048586f1d-38f580716ccdb7d3":{"db_online_shop_dev":{"ecommerce":{":producto":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202406292317\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-19048586f1d-38f580716ccdb7d3\"\u003e\u003centity id\u003d\"1\" name\u003d\"producto\" fq-name\u003d\"ecommerce.producto\" order\u003d\"0\" color-bg\u003d\"255,128,64\" x\u003d\"495\" y\u003d\"197\"\u003e\u003cpath name\u003d\"ecommerce\"/\u003e\u003cpath name\u003d\"db_online_shop_dev\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"categoria\" fq-name\u003d\"ecommerce.categoria\" order\u003d\"1\" x\u003d\"717\" y\u003d\"53\"\u003e\u003cpath name\u003d\"ecommerce\"/\u003e\u003cpath name\u003d\"db_online_shop_dev\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"marca\" fq-name\u003d\"ecommerce.marca\" order\u003d\"2\" x\u003d\"717\" y\u003d\"473\"\u003e\u003cpath name\u003d\"ecommerce\"/\u003e\u003cpath name\u003d\"db_online_shop_dev\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"sitio\" fq-name\u003d\"web.sitio\" order\u003d\"3\" color-bg\u003d\"204,192,184\" x\u003d\"901\" y\u003d\"278\"\u003e\u003cpath name\u003d\"web\"/\u003e\u003cpath name\u003d\"db_online_shop_dev\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"producto_imagen\" fq-name\u003d\"ecommerce.producto_imagen\" order\u003d\"4\" x\u003d\"301\" y\u003d\"254\"\u003e\u003cpath name\u003d\"ecommerce\"/\u003e\u003cpath name\u003d\"db_online_shop_dev\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"fk_producto_imagen\" fq-name\u003d\"ecommerce.producto_imagen.fk_producto_imagen\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"fk_producto_categoria\" fq-name\u003d\"ecommerce.producto.fk_producto_categoria\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_producto_marca\" fq-name\u003d\"ecommerce.producto.fk_producto_marca\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_producto_sitio\" fq-name\u003d\"ecommerce.producto.fk_producto_sitio\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_categoria_sitio\" fq-name\u003d\"ecommerce.categoria.fk_categoria_sitio\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"fk_marca_sitio\" fq-name\u003d\"ecommerce.marca.fk_marca_sitio\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"3\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}}},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800
+		}
+	}
+}

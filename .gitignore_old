@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+*.user
+*.suo
+*.cache
+*.log
+.vscode/
+.env
+.vs
+
+# To remove the bin and obj directories from the repository, run the following commands:
+# git rm -r --cached **/bin
+# git rm -r --cached **/obj

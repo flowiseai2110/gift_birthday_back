@@ -1,4 +1,4 @@
-namespace API.CORE.SUPABASE
+namespace WEB.API.ECOMMERCE
 {
     public class WeatherForecast
     {

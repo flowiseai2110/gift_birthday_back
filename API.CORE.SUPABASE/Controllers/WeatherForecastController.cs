@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Negocio.BL;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace API.CORE.SUPABASE.Controllers
+namespace WEB.API.ECOMMERCE.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -32,6 +29,5 @@ namespace API.CORE.SUPABASE.Controllers
             })
             .ToArray();
         }
- 
     }
 }

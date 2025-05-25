@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Configuracion</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Scripts_db_ecommerce/01. Creacion de Tablas.sql</name>
+			<type>1</type>
+			<location>//C:/Users/Usuario/Documents/Diego/Net8/Ecommerce Api/WEB.API.ECOMMERCE/Web.Api.Persistence/Scripts/Ecommerce/configuracion_inicial_V01/01. Creacion de Tablas.sql</location>
+		</link>
+		<link>
+			<name>Scripts_db_ecommerce/query.sql</name>
+			<type>1</type>
+			<location>//C:/Users/Usuario/Documents/Diego/Net8/Ecommerce Api/WEB.API.ECOMMERCE/Web.Api.Persistence/Scripts/Ecommerce/configuracion_inicial_V01/query.sql</location>
+		</link>
+	</linkedResources>
+</projectDescription>
