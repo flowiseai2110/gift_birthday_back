@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace Negocio.BL
 {
     public class PersonaBL
-    {
+    {   
+        //DLQ: LISTA PERSONA DE SUPABASE
         public Task<List<Persona>> getListPersona() { 
             return new SupabaseService().getListPersona();
         }

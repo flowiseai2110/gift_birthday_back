@@ -32,7 +32,7 @@ namespace API.CORE.SUPABASE.Controllers
             })
             .ToArray();
         }
-
+        //dlq: lista persona de supabase
         [HttpGet("personas")]
         public async Task<IActionResult> GetPersonas()
         {
