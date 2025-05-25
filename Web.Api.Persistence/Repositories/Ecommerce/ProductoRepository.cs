@@ -7,7 +7,6 @@ using Web.Api.Domain.Entities;
 using Web.Api.Dto.Gestionar.Productos;
 using Web.Api.Interface.Persistence;
 using Web.Api.Persistence.Context;
-using Web.Api.Persistence.Context.Promocion;
 
 namespace Web.Api.Persistence.Repositories.Ecommerce
 {

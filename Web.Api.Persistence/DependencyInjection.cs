@@ -4,10 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Web.Api.Interface;
 using Web.Api.Persistence.Context;
-using Web.Api.Persistence.Context.Promocion;
 using Web.Api.Persistence.Repositories;
 using Web.Api.Persistence.Repositories.Ecommerce;
-using Web.Api.Persistence.Repositories.Promociones;
 using Web.Data.Core;
 
 namespace Web.Api.Persistence
@@ -19,9 +17,7 @@ namespace Web.Api.Persistence
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         { 
             services.AddSingleton<ApplicationContext>();
-            services.AddSingleton<DapperContext>();
-            services.AddSingleton<PromocionContext>();
-            services.AddSingleton<DapperPromocionContext>();
+            services.AddSingleton<DapperContext>(); 
             services.AddSingleton<SupabaseContext>();
             //services.AddScoped<IUnitOfWork, UnitOfWork>();
 

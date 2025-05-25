@@ -4,23 +4,19 @@ using Web.Api.Persistence;
 using Web.Api.UseCases;
 using WEB.API.ECOMMERCE.Modules.Features;
 using WEB.API.ECOMMERCE.Modules.Middleware;
-using Web.Api.Interface.Infraestructure;
-using Web.Api.Infraestructure.EventBus;
-using Web.Api.Infraestructure;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+ 
+using Web.Api.Infraestructure; 
 using Autofac.Extensions.DependencyInjection;
 
 using Web.Data.Core;
 using Web.Api.Interface;
 using LinqToDB.Common;
 using Web.Api.Persistence.Context;
-using Web.Api.UseCases.Services.Secciones;
-using Web.Api.UseCases.Services.Empresas;
+using Web.Api.UseCases.Services.Secciones; 
 using System.Reflection;
 using MediatR;
 using MediatR.Pipeline;
-using Web.Api.UseCases.Services.Plugins;
-using Web.Api.Interface.UseCases.Servicios.Empresas;
+using Web.Api.UseCases.Services.Plugins; 
 using Web.Api.Interface.UseCases.Servicios.Productos;
 using Web.Api.UseCases.Services.Productos;
 
@@ -55,7 +51,7 @@ builder.Host
         builder.RegisterType<SeccionService>().As<ISeccionService>().InstancePerLifetimeScope();
         builder.RegisterGeneric(typeof(PluginManager<>)).As(typeof(IPluginManager<>)).InstancePerLifetimeScope();
         builder.RegisterType<SeccionPluginManager>().As<ISeccionPluginManager>().InstancePerLifetimeScope();
-        builder.RegisterType<EmpresaService>().As<IEmpresaService>().InstancePerLifetimeScope();
+        //builder.RegisterType<EmpresaService>().As<IEmpresaService>().InstancePerLifetimeScope();
         builder.RegisterType<ProductoService>().As<IProductoService>().InstancePerLifetimeScope();
 
     });

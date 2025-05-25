@@ -12,7 +12,7 @@ using Web.Api.Entidades.Core.Secciones;
 using Web.Api.Interface;
 using Web.Api.Interface.UseCases.Servicios.Empresas;
 using Web.Api.Interface.UseCases.Servicios.Productos;
-using Web.Api.UseCases.Services.Empresas;
+ 
 
 namespace Web.Api.UseCases.Services.Secciones.Producto
 {

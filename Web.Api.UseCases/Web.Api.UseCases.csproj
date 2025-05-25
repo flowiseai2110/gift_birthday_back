@@ -26,17 +26,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\ClienteCartillaDetalle\Command\" />
-    <Folder Include="Services\ClienteCartillaDetalle\Queries\" />
-    <Folder Include="Services\ClientesCartillas\Command\" />
-    <Folder Include="Services\ClientesCartillas\Queries\" />
+    <Folder Include="Services\Clientes\Command\" />
+    <Folder Include="Services\Clientes\Queries\" />
     <Folder Include="Services\Contactos\Command\" />
     <Folder Include="Services\Contactos\Queries\" />
+    <Folder Include="Services\Empresas\Command\" />
+    <Folder Include="Services\Empresas\Queries\" />
     <Folder Include="Services\Secciones\Contactos\" />
     <Folder Include="Services\Secciones\Menu\" />
     <Folder Include="Services\Secciones\CarritoCompra\" />
     <Folder Include="Services\Secciones\Ventas\BuscarProductos\" />
     <Folder Include="Services\Secciones\Ventas\DetalleProductos\" />
+    <Folder Include="Services\Usuarios\Command\" />
+    <Folder Include="Services\Usuarios\Queries\" />
   </ItemGroup>
 
 </Project>
