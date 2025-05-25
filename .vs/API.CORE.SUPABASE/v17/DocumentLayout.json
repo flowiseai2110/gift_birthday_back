@@ -30,12 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -46,8 +42,7 @@
               "RelativeToolTip": "API.CORE.SUPABASE\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwCYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T02:30:02.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T02:30:02.03Z"
             },
             {
               "$type": "Document",
@@ -59,8 +54,7 @@
               "RelativeToolTip": "Negocio.BL\\PersonaBL.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T02:28:11.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T02:28:11.768Z"
             },
             {
               "$type": "Document",
@@ -72,8 +66,7 @@
               "RelativeToolTip": "DataAccess.DA\\Services\\ISupabaseService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T02:14:35.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T02:14:35.905Z"
             },
             {
               "$type": "Document",
@@ -98,8 +91,7 @@
               "RelativeToolTip": "API.CORE.SUPABASE\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-24T02:11:43.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T02:11:43.99Z"
             }
           ]
         }
