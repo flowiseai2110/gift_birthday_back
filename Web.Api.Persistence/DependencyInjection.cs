@@ -22,8 +22,9 @@ namespace Web.Api.Persistence
             services.AddSingleton<DapperContext>();
             services.AddSingleton<PromocionContext>();
             services.AddSingleton<DapperPromocionContext>();
+            services.AddSingleton<SupabaseContext>();
             //services.AddScoped<IUnitOfWork, UnitOfWork>();
- 
+
 
             //services.AddScoped<IProductoRepository, ProductoRepository>();
             //services.AddScoped<IEmpresaRepository, EmpresaRepository>();

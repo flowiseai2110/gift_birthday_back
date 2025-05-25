@@ -20,4 +20,13 @@ namespace Web.Api.Dto.Gestionar
         public string correo_electronico { get; set; }
         public string v_usuario_registro { get; set; }
     }
+
+    public partial class UsuarioSupabaseDto{
+        public int i_id { get; set; }
+        public string? v_dni { get; set; }
+        public string? v_nombre { get; set; }
+        public string? v_apellido_paterno { get; set; }
+        public string? v_apellido_materno { get; set; }
+
+    }
 }

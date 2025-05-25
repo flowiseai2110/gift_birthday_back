@@ -23,7 +23,7 @@ namespace WEB.API.ECOMMERCE.Controllers
         }
 
         [HttpPost("listarEmpresa")]
-        public async Task<IActionResult> Listar([FromBody] GetAllEmpresaQuery GetEmpresa)
+        public async Task<IActionResult> Listar([FromBody] GetUsuariosQuery GetEmpresa)
         { 
             //var responde = await _mediator.Send(GetEmpresa);
             var responde = await _empresa.listar();
