@@ -32,13 +32,6 @@ namespace API.CORE.SUPABASE.Controllers
             })
             .ToArray();
         }
-        //dlq: lista persona de supabase
-        [HttpGet("personas")]
-        public async Task<IActionResult> GetPersonas()
-        {
-            var personaBL = new PersonaBL();
-            var personas = await personaBL.getListPersona();
-            return Ok(personas);
-        }
+ 
     }
 }

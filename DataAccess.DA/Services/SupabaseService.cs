@@ -17,6 +17,7 @@ namespace DataAccess.DA.Services
 
         public SupabaseService(IConfiguration configuration)
         {
+             
             _settings = new SupabaseSettings
             {
                 Url = configuration["Supabase:Url"] ?? "",

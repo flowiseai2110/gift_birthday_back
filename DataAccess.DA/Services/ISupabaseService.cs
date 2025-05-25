@@ -8,5 +8,6 @@ namespace DataAccess.DA.Services
 {
     public interface ISupabaseService
     {
+        public Task<List<Persona>> getListPersona();
     }
 }
