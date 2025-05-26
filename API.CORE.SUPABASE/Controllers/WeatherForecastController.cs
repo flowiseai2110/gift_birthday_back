@@ -21,7 +21,7 @@ namespace WEB.API.ECOMMERCE.Controllers
         public async Task<IActionResult> GetPersonas()
         {
             var responde = await _mediator.Send(new GetUsuariosQuery());
-
+            //cmabio1
             return Ok(responde);
         }
     }
