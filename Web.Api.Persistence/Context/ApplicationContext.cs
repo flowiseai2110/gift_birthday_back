@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Web.Api.Domain.Entities;
-using Web.Api.Persistence.Configuraciones;
 using Web.Api.Domain.Entities.config;
 
 namespace Web.Api.Persistence.Context
@@ -28,10 +27,7 @@ namespace Web.Api.Persistence.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new EmpresaMap());
-            modelBuilder.ApplyConfiguration(new LocalComercialMap());
-            modelBuilder.ApplyConfiguration(new ProductoMap());
-            modelBuilder.ApplyConfiguration(new ProductoImagenMap());
+           
         }
     }
 }

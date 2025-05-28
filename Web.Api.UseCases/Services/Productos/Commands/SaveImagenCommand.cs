@@ -42,12 +42,12 @@ namespace Web.Api.UseCases.Services.Productos.Commands
                 if (entity == null)
                 {
                     entity = _mapper.Map<ProductoImagen>(request.dataDto);
-                    entity.fechaRegistro = DateTime.Now;
+                    
                     _context.Add(entity);
                 }
                 else {
                     _mapper.Map(request.dataDto, entity);
-                    entity.fechaModificacion = DateTime.Now;
+                    
                 }
                  
                 return true;  

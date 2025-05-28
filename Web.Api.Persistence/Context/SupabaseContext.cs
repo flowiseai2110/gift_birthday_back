@@ -1,7 +1,6 @@
 ﻿ 
 using Microsoft.Extensions.Configuration; 
 using System.Net.Http.Headers;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Web.Api.Persistence.Context
 {

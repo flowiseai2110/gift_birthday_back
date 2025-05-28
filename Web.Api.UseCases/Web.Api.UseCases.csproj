@@ -32,6 +32,10 @@
     <Folder Include="Services\Contactos\Queries\" />
     <Folder Include="Services\Empresas\Command\" />
     <Folder Include="Services\Empresas\Queries\" />
+    <Folder Include="Services\EventoGift\Commands\" />
+    <Folder Include="Services\EventoGift\Queries\" />
+    <Folder Include="Services\Gift\Commands\" />
+    <Folder Include="Services\Gift\Queries\" />
     <Folder Include="Services\Secciones\Contactos\" />
     <Folder Include="Services\Secciones\Menu\" />
     <Folder Include="Services\Secciones\CarritoCompra\" />
