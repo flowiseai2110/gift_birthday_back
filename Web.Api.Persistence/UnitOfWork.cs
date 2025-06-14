@@ -1,20 +1,31 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Web.Data.Core;
 using Web.Api.Interface;
+using Web.Api.Interface.Persistence;
 
 namespace Web.Api.Persistence
 {
-    public class UnitOfWork : BaseUnitOfWork, IUnitOfWork
-    {
-        private readonly IDbContext _ctx;
-        public UnitOfWork(IDbContext ctx)
-              : base(ctx)
+    public class UnitOfWork : IUnitOfWork
+    { 
+        public IProductoRepository Productos { get; }
+
+        public IEventoRepository Eventos { get; }
+
+        public UnitOfWork( 
+            IProductoRepository productos, IEventoRepository eventos)
+            
+        { 
+            Productos = productos; 
+            Eventos = eventos;
+        }
+
+        public void Dispose()
         {
-            _ctx = ctx;
+            GC.SuppressFinalize(this);
         }
     }
 }

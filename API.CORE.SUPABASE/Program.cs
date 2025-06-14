@@ -1,24 +1,21 @@
 using Autofac;
-using Microsoft.Extensions.Configuration;
-using Web.Api.Persistence;
-using Web.Api.UseCases;
-using WEB.API.ECOMMERCE.Modules.Features;
-using WEB.API.ECOMMERCE.Modules.Middleware;
- 
-using Web.Api.Infraestructure; 
 using Autofac.Extensions.DependencyInjection;
-
-using Web.Data.Core;
-using Web.Api.Interface;
 using LinqToDB.Common;
-using Web.Api.Persistence.Context;
-using Web.Api.UseCases.Services.Secciones; 
-using System.Reflection;
 using MediatR;
 using MediatR.Pipeline;
-using Web.Api.UseCases.Services.Plugins; 
-using Web.Api.Interface.UseCases.Servicios.Productos;
-using Web.Api.UseCases.Services.Productos;
+using Microsoft.Extensions.Configuration;
+using System.Reflection;
+
+using Web.Api.Infraestructure;
+  
+using Web.Api.Interface;
+using Web.Api.Persistence;
+using Web.Api.Persistence.Context;
+using Web.Api.UseCases;  
+
+using Web.Data.Core;
+using WEB.API.ECOMMERCE.Modules.Features;
+using WEB.API.ECOMMERCE.Modules.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +25,9 @@ builder.Host
     .UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>((builder) =>
     {
-        string connectionString = "Server=192.168.18.6;Database=db_ecommerce_dev;uid=postgres;pwd=admin;";
+        //string connectionString = "Server=192.168.18.6;Database=db_ecommerce_dev;uid=postgres;pwd=admin;";
+        //Server=34.63.132.241;Port=5432;Database=db_evento;uid=postgres;pwd=$1$t3m4$2110;
+        string connectionString = "Server=34.63.132.241;Port=5432;Database=db_evento;uid=postgres;pwd=$1$t3m4$2110;Pooling=true;Trust Server Certificate=true;";
 
         builder.RegisterAssemblyTypes(Assembly.Load(new AssemblyName("Web.Api.UseCases")))
                .Where(t => t.Name.EndsWith("Query", StringComparison.Ordinal) && t.GetTypeInfo().IsClass)
@@ -42,17 +41,16 @@ builder.Host
 
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly).AsImplementedInterfaces();
 
-        builder.RegisterType<PluginService>().As<IPluginService>().InstancePerLifetimeScope();
-        builder.RegisterType<UnitOfWork>()
-               .As<IUnitOfWork>()
-               .WithParameter((c, p) => true, (c, p) => p.ResolveNamed<IDbContext>("context"))
-               .InstancePerLifetimeScope();
+         
+        //builder.RegisterType<UnitOfWork>()
+        //       .As<IUnitOfWork>()
+        //       .WithParameter((c, p) => true, (c, p) => p.ResolveNamed<IDbContext>("context"))
+        //       .InstancePerLifetimeScope();
 
-        builder.RegisterType<SeccionService>().As<ISeccionService>().InstancePerLifetimeScope();
-        builder.RegisterGeneric(typeof(PluginManager<>)).As(typeof(IPluginManager<>)).InstancePerLifetimeScope();
-        builder.RegisterType<SeccionPluginManager>().As<ISeccionPluginManager>().InstancePerLifetimeScope();
-        //builder.RegisterType<EmpresaService>().As<IEmpresaService>().InstancePerLifetimeScope();
-        builder.RegisterType<ProductoService>().As<IProductoService>().InstancePerLifetimeScope();
+         
+        //builder.RegisterType<EmpresaService>().As<IEmpresaService>().InstancePerLifetimeScope(); 
+        //builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+        //builder.RegisterType<ProductoService>().As<IProductoService>().InstancePerLifetimeScope(); 
 
     });
 // Add services to the container.
@@ -80,6 +78,7 @@ builder.Services.AddCors(opt =>
     rutasHabilitas.Add("http://localhost:4200");
     rutasHabilitas.Add("https://localhost:4300");
     rutasHabilitas.Add("http://localhost:4300");
+    rutasHabilitas.Add("http://localhost:4600");
     //Configuration.GetSection("CORS").Bind(rutasHabilitas);
     opt.AddPolicy("Ecommerce", det =>
     {

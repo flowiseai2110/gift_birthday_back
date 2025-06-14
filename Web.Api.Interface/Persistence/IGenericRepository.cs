@@ -8,10 +8,10 @@ namespace Web.Api.Interface.Persistence
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<Int32> CreateAsync(T entity);
-        bool UpdateAsync(T entity);
-         T? GetByIdAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync(T entity);
+        public Task<Int32> CreateAsync(T entity);
+        public bool UpdateAsync(T entity);
+        public T? GetByIdAsync(int id);
+        public Task<IEnumerable<T>> GetAllAsync(T entity);
 
     }
 }

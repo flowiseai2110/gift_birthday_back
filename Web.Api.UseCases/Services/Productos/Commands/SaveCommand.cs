@@ -29,7 +29,7 @@ namespace Web.Api.UseCases.Services.Productos.Commands
         public SaveCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
-            _context = _unitOfWork.Context;
+            //_context = _unitOfWork.Context;
             _mapper = mapper;   
         }
 

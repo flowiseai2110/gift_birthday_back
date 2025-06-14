@@ -25,7 +25,7 @@ namespace Web.Api.UseCases.Services.Productos.Queries
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            this._context = unitOfWork.Context;
+            //this._context = unitOfWork.Context;
         }
 
         public async Task<IEnumerable<ProductoDto>> Handle(GetAllProductoQuery request, CancellationToken cancellationToken)

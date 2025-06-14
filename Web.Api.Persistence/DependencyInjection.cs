@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Web.Api.Interface;
+using Web.Api.Interface.Persistence;
 using Web.Api.Persistence.Context;
 using Web.Api.Persistence.Repositories;
 using Web.Api.Persistence.Repositories.Ecommerce;
@@ -19,10 +20,10 @@ namespace Web.Api.Persistence
             services.AddSingleton<ApplicationContext>();
             services.AddSingleton<DapperContext>(); 
             services.AddSingleton<SupabaseContext>();
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
-            //services.AddScoped<IProductoRepository, ProductoRepository>();
+            services.AddScoped<IEventoRepository, EventoRepository>();
             //services.AddScoped<IEmpresaRepository, EmpresaRepository>();
             //services.AddScoped<ILocalComercialRepository, LocalComercialRepository>();
             //services.AddScoped<IUsuarioRepository, UsuarioRepository>();

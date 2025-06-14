@@ -36,11 +36,6 @@
     <Folder Include="Services\EventoGift\Queries\" />
     <Folder Include="Services\Gift\Commands\" />
     <Folder Include="Services\Gift\Queries\" />
-    <Folder Include="Services\Secciones\Contactos\" />
-    <Folder Include="Services\Secciones\Menu\" />
-    <Folder Include="Services\Secciones\CarritoCompra\" />
-    <Folder Include="Services\Secciones\Ventas\BuscarProductos\" />
-    <Folder Include="Services\Secciones\Ventas\DetalleProductos\" />
     <Folder Include="Services\Usuarios\Command\" />
     <Folder Include="Services\Usuarios\Queries\" />
   </ItemGroup>

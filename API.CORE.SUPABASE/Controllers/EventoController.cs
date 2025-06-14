@@ -5,7 +5,7 @@ using Web.Api.Entidades.Core.Secciones;
 using Web.Api.UseCases.Services.Evento.Commands;
 using Web.Api.UseCases.Services.Evento.Queries;
 using Web.Api.UseCases.Services.GiftBirthDay.Queries;
-using Web.Api.UseCases.Services.Secciones;
+ 
 
 namespace WEB.API.ECOMMERCE.Controllers
 {

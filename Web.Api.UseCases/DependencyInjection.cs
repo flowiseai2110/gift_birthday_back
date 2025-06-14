@@ -1,12 +1,14 @@
-﻿ using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using MediatR;
+ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reflection;
-using FluentValidation;
-using MediatR;
+using Web.Api.Interface;
+using Web.Api.Persistence;
 using Web.Api.UseCases.Common.Behaviours;
 
 namespace Web.Api.UseCases
@@ -15,6 +17,7 @@ namespace Web.Api.UseCases
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(cfg => { 

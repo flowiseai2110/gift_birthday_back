@@ -19,10 +19,7 @@ namespace Web.Api.Persistence.Repositories
 
         public async Task<int> CreateAsync(Producto entity)
         {
-            _efContext.Producto.Add(entity);
-            await _efContext.SaveChangesAsync();
-
-            return entity.productoId;
+            return 1;
         }
 
         public async Task<IEnumerable<Producto>> GetAllAsync(Producto entity)
@@ -35,12 +32,12 @@ namespace Web.Api.Persistence.Repositories
             return result;
         }
 
-        public Producto? GetByIdAsync(int id)
-        {
-            var result = _efContext.Producto.Where(x => x.productoId == id);
+        //public Producto? GetByIdAsync(int id)
+        //{
+        //    var result = _efContext.Producto.Where(x => x.productoId == id);
 
-            return result.FirstOrDefault();
-        }
+        //    return result.FirstOrDefault();
+        //}
 
         public Task<IEnumerable<ProductoRequestDto>> GetProductoxFiltroAsync(ProductoRequestDto entity)
         {

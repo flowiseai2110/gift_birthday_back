@@ -33,17 +33,9 @@ namespace Web.Api.Persistence.Repositories.Ecommerce
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<ProductoResponseDto>> GetProductoxFiltroAsync(ProductoRequestDto entity)
+        public Task<IEnumerable<ProductoResponseDto>> GetProductoxFiltroAsync(ProductoRequestDto entity)
         {
-            var result =  from producto in _efContext.Producto join producto_imagen in _efContext.ProductoImagen on producto.productoId equals producto_imagen.productoId
-                          select new ProductoResponseDto {
-                             nombre = producto.nombre,
-                             descripcion = producto.descripcion,
-                             precio_venta = producto.precioVenta,
-                             nombre_archivo = producto_imagen.nombreArchivo,
-                             url_archivo = producto_imagen.urlArchivo 
-                          };
-            return result;
+            throw new NotImplementedException();
         }
 
         public bool UpdateAsync(Producto entity)
