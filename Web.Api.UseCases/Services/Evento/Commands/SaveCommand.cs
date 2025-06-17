@@ -18,7 +18,7 @@ using static LinqToDB.Common.Configuration;
 
 namespace Web.Api.UseCases.Services.Evento.Commands
 {
-    public class SaveEventCommand:IRequest<bool>
+    public class SaveEventCommand : IRequest<bool>
     {
         public int id { get; set; }
         public string nombre { get; set; } = string.Empty;
@@ -40,13 +40,13 @@ namespace Web.Api.UseCases.Services.Evento.Commands
             client = efContext;
         }
 
-        public async Task<bool> Handle(SaveEventCommand request, CancellationToken cancellationToken)    
-        {   
+        public async Task<bool> Handle(SaveEventCommand request, CancellationToken cancellationToken)
+        {
             try
-            { 
+            {
+                int result = 0;
                 var entity = new EventoBE
                 {
-                    id = request.id,
                     nombre = request.nombre,
                     descripcion = request.descripcion,
                     //categoriaId = request.categoria_id,
@@ -58,8 +58,17 @@ namespace Web.Api.UseCases.Services.Evento.Commands
                     usuario_registro = "admin" // o request.user, si lo tienes
 
                 };
-                 
-                int result = await client.CreateAsync(entity);
+
+                if (request.id == 0)
+                {
+                    result = await client.CreateAsync(entity);
+                }
+                else
+                {
+                    entity.id = request.id;
+                    result = await client.UpdateAsync(entity) ? 1 : 0;
+                }
+
 
                 return result > 0 ? true : false;
 

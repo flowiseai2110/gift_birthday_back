@@ -38,7 +38,7 @@ namespace Web.Api.Persistence.Repositories.Ecommerce
             throw new NotImplementedException();
         }
 
-        public bool UpdateAsync(Producto entity)
+        public Task<bool> UpdateAsync(Producto entity)
         {
             throw new NotImplementedException();
         }

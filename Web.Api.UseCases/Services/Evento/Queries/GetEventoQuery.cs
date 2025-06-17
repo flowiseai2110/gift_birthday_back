@@ -4,6 +4,7 @@ using MediatR;
 using System.Text.Json;
 using Web.Api.Domain.Entities;
 using Web.Api.Interface;
+using Web.Api.Interface.Persistence;
 using Web.Api.Persistence.Context;
 
 namespace Web.Api.UseCases.Services.Evento.Queries
@@ -14,9 +15,9 @@ namespace Web.Api.UseCases.Services.Evento.Queries
 
     public class GetEventAllHandler : IRequestHandler<GetEventAllQuery, IEnumerable<EventoBE>>
     {
-        private readonly IUnitOfWork client;
+        private readonly IEventoRepository client;
 
-        public GetEventAllHandler(IUnitOfWork efContext)
+        public GetEventAllHandler(IEventoRepository efContext)
         {
             client = efContext;
         }
@@ -33,7 +34,7 @@ namespace Web.Api.UseCases.Services.Evento.Queries
             //});
 
             //return usuarios ?? new List<EventoBE>();
-            return await client.Eventos.GetAllAsync(new EventoBE());
+            return await client.GetAllAsync(new EventoBE());
 
         }
     }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Web.Api.Domain.Entities;
 using Web.Api.Interface.Persistence;
 using Web.Api.Persistence.Context;
+using Web.Data.Core;
 
 namespace Web.Api.Persistence.Repositories
 {
@@ -58,9 +59,23 @@ namespace Web.Api.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public bool UpdateAsync(EventoBE entity)
+        public async Task<bool> UpdateAsync(EventoBE entity)
         {
-            throw new NotImplementedException();
+            var existing = await _efContext.Eventos.FindAsync(entity.id);
+            if (existing == null) return false;
+
+            existing.nombre = entity.nombre;
+            existing.descripcion = entity.descripcion;
+            existing.fecha_inicio = entity.fecha_inicio;
+            existing.fecha_fin = entity.fecha_fin;
+            existing.hora_inicio = entity.hora_inicio;
+            existing.hora_fin = entity.hora_fin;
+            existing.fecha_modificacion = DateTime.UtcNow;
+            existing.usuario_modificacion = "admin";
+
+            await _efContext.SaveChangesAsync();
+
+            return true;
         }
     }
 }
